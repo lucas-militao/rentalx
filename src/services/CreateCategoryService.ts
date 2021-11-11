@@ -1,14 +1,12 @@
-import { CategoriesRepository } from "../routes/repositories/CategoriesRepository";
-
-interface IRequest {
-  name: string;
-  description: string;
-}
+import {
+  ICategoriesRepository,
+  ICreateCategoryDTO,
+} from "../repositories/ICategoriesRepository";
 
 class CreateCategoryService {
-  constructor(private categoriesRepository: CategoriesRepository) {}
+  constructor(private categoriesRepository: ICategoriesRepository) {}
 
-  execute({ name, description }: IRequest) {
+  execute({ name, description }: ICreateCategoryDTO) {
     const categoryAlreadyExists = this.categoriesRepository.findByName(name);
 
     if (categoryAlreadyExists) {
