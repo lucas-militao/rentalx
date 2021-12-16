@@ -31,6 +31,8 @@ class CarsRepository implements ICarsRepository {
       name,
     });
 
+    console.log(car);
+
     await this.repository.save(car);
 
     return car;
