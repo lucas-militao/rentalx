@@ -1,7 +1,6 @@
 import { inject, injectable } from "tsyringe";
 
 import { Car } from "@modules/cars/infra/typeorm/entities/Car";
-import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRepository";
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 
 interface IResquest {
@@ -18,7 +17,7 @@ interface IResquest {
 class CreateCarUseCase {
   constructor(
     @inject("CarsRepository")
-    private carsRepository: CarsRepository
+    private carsRepository: ICarsRepository
   ) {}
 
   async execute({
