@@ -9,6 +9,7 @@ interface ICreateCarDTO {
   license_plate: string;
   name: string;
   specifications?: Specification[];
+  id?: string;
 }
 
 export { ICreateCarDTO };
