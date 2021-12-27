@@ -42,8 +42,6 @@ describe("ListCars", () => {
       brand: "Car_Brand_Test",
     });
 
-    console.log(cars);
-
     expect(cars).toEqual([car]);
   });
 
@@ -62,8 +60,6 @@ describe("ListCars", () => {
       name: "Car Test",
     });
 
-    console.log(cars);
-
     expect(cars).toEqual([car]);
   });
 
@@ -81,8 +77,6 @@ describe("ListCars", () => {
     const cars = await listAvailableCarsUseCase.execute({
       category_id: "12345",
     });
-
-    console.log(cars);
 
     expect(cars).toEqual([car]);
   });
