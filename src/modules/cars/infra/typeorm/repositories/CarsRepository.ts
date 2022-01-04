@@ -69,6 +69,8 @@ class CarsRepository implements ICarsRepository {
 
     const cars = await carsQuery.getMany();
 
+    console.log(`${brand} ${name} ${category_id}`);
+
     return cars;
   }
 
