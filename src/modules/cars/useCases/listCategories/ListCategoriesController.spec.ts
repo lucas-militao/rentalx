@@ -28,7 +28,7 @@ describe("List Categories Controller", () => {
   });
 
   it("should be able to list all available categories", async () => {
-    const responseToken = await request(app).post("/").send({
+    const responseToken = await request(app).post("/sessions").send({
       email: "admin@rentx.com.br",
       password: "admin",
     });
