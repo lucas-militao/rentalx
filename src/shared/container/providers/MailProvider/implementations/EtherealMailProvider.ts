@@ -24,7 +24,12 @@ class EtherealMailProvider implements IMailProvider {
       .catch((err) => console.error(err));
   }
 
-  async sendMail(to: string, subject: string, body: string): Promise<void> {
+  async sendMail(
+    to: string,
+    subject: string,
+    variables: any,
+    path: string
+  ): Promise<void> {
     const message = await this.client.sendMail({
       to,
       from: "Rentx <noreplay@rentx.com.br>",
