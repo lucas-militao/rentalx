@@ -39,7 +39,7 @@ class RefreshTokenUseCase {
     await this.usersTokensRepository.deleteById(userToken.id);
 
     const refresh_token = sign({ email }, secret_refresh_token, {
-      subject: userToken.id,
+      subject: user_id,
       expiresIn: expires_in_refresh_token,
     });
 
