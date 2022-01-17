@@ -63,8 +63,6 @@ class AuthenticateUserUseCase {
       expiresIn: expires_in_refresh_token,
     });
 
-    console.log(`USER TOKEN ID AuthenticateUserUseCase ${user.id}`);
-
     const refreshToken_expires_date = this.dateProvider.addDays(
       expires_refresh_token_days
     );
